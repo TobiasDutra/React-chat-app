@@ -6,8 +6,8 @@ import socketIOClient from "socket.io-client"
 
 const ChatContainer = () => {
     const [user,setUser] = useState(localStorage.getItem("user"))
-    const socketio = socketIOClient("http://localhost:3002")
-    // const socketio = socketIOClient("https://react-chat-app-tobiasdutra-6y2r.onrender.com/app")
+    // const socketio = socketIOClient("http://localhost:3002")
+    const socketio = socketIOClient("https://react-chat-app-tobiasdutra-6y2r.onrender.com")
     const [chats, setChats] = useState([])
     
     useEffect(() => {

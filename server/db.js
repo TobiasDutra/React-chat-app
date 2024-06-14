@@ -3,7 +3,7 @@ require("dotenv").config();
 const { MONGODB_CONNECT_URI } = process.env;
 
 const Connection = async () => {
-  // const mongoURI = "mongodb://127.0.0.1:27017/nuevoChat2";
+  // const mongoURI = "mongodb://127.0.0.1:27017/UltimoChat";
   try {
     await mongoose
       .connect(MONGODB_CONNECT_URI, {
