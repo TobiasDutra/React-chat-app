@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 export const ChatLists = ({chats}) => {
+    const endOfMessages = useRef()
+
     const user = localStorage.getItem("user")
     function SenderChat ({message, username, avatar}) {
         return (
@@ -26,6 +28,15 @@ export const ChatLists = ({chats}) => {
 
         )
     }
+
+    useEffect(() => {
+        scrollToBottom()
+    }, [chats])
+
+    const scrollToBottom = () => {
+        endOfMessages.current?.scrollIntoView({behavior: "smooth"})
+    }
+
   return (
     <div className='chats_list'>
         {
@@ -46,6 +57,7 @@ export const ChatLists = ({chats}) => {
                 }
             })
         }
+        <div ref={endOfMessages}></div>
     </div>
 
   )
