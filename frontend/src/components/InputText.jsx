@@ -8,7 +8,7 @@ export const InputText = ({addMessage}) => {
     }
   return (
     <div className='inputtext_container'>
-        <textarea name="message" id="message" rows="6" placeholder='Write a message' onChange={(e) => setMessage(e.target.value)} ></textarea>
+        <textarea name="message" id="message" rows="6" placeholder='Write a message' onChange={(e) => setMessage(e.target.value)} value={message}></textarea>
         <button onClick={sendMessage}>Send</button>
     </div>
   )
