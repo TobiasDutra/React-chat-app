@@ -68,7 +68,8 @@
 .chats_header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    font-size: larger;
 }
 
 .chats_logout {
@@ -81,18 +82,21 @@
     height: 75vh;
     overflow: scroll;
     overflow-x: hidden;
+    padding-right: 15px;
 }
 .chat_sender {
     display: flex;
     justify-content: flex-end;
-    flex-direction: row
+    flex-direction: row;
+    padding-bottom: 14px;
 }
 
 .chat_sender img,
 .chat_receiver img {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     border-radius: 100%;
+    margin: 10px;
 }
 
 .chat_sender p {
@@ -105,7 +109,8 @@
 .chat_receiver {
     display: flex;
     justify-content: flex-start;
-    flex-direction: row
+    flex-direction: row;
+    padding-bottom: 14px;
 }
 
 .chat_receiver p {
@@ -118,12 +123,15 @@
 /* input text */
 .inputtext_container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    padding-right: 20px;
+    margin-top: 20px;
 }
 
 .inputtext_container button {
-    width: 10%;
+    width: 30%;
+    max-width: 100px;
     height: 50px;
     font-weight: bold;
     border-radius: 10px;
@@ -135,10 +143,12 @@
 }
 
 .inputtext_container textarea {
-    width: 60%;
+    width: 94%;
     height: 50px;
     border-radius: 10px;
     border-width: 5px;
     padding: 10px;
     font-size: 18px;
+    resize: none;
+    margin-right: 6px;
 }

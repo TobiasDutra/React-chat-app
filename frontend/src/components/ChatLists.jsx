@@ -21,7 +21,7 @@ export const ChatLists = ({chats}) => {
             <div className='chat_receiver'>
                 <img src={avatar} alt="" />
                 <p>
-                    <strong>{username}</strong>
+                    <strong>{username} </strong> <br />
                     {message}
                 </p>
             </div>
