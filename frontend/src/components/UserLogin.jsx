@@ -14,8 +14,8 @@ const UserLogin = ({setUser}) => {
     return (
         <div className="login_container">
             <div className="login_title">
-                <FaReact/>
-                    <h1>Chat app</h1>
+                <FaReact className="login_icon"/>
+                    <h1>React chat app</h1>
             </div>
             <div className="login_form">
                 <input type="text" placeholder="Introduce tu nombre" onChange={(e) =>setUserName(e.target.value)}/>

@@ -8,10 +8,17 @@
 .App {
     background-color: bisque;
     max-height: 100%;
+    width: 100%;
     padding: 40px
 }
 
+
 /* login */
+
+.login_container {
+    height: 100%;
+}
+
 .login_title {
     display: flex;
     align-items: center;
@@ -43,7 +50,9 @@
 }
 
 .login_form button {
-    width: 10%;
+    width: 20%;
+    max-width: 90px;
+
     height: 50px;
     font-weight: bold;
     border-radius: 14px;
