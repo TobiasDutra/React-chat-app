@@ -1,12 +1,19 @@
 const mongoose = require("mongoose");
-function Connection() {
+require("dotenv").config();
+const { MONGODB_CONNECT_URI } = process.env;
+
+const Connection = async () => {
   // const mongoURI = "mongodb://127.0.0.1:27017/nuevoChat2";
-  const mongoURI =
-    "mongodb+srv://tobiasdutra:nNnnUd2rPaOQwAFR@cluster0.dyfkjus.mongodb.net/chat";
-  mongoose
-    .connect(mongoURI)
-    .then(() => console.log("connected"))
-    .catch((err) => console.log(err));
-}
+  try {
+    await mongoose
+      .connect(MONGODB_CONNECT_URI, {
+        serverSelectionTimeoutMS: 30000,
+        socketTimeoutMS: 45000,
+      })
+      .then(console.log("connected to mongodb"));
+  } catch (error) {
+    console.error("Error connecting to mongodb", error.message);
+  }
+};
 
 module.exports = Connection;
