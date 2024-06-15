@@ -2,12 +2,12 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const { MONGODB_CONNECT_URI } = process.env;
 
-function Connection() {
+const Connection = async () => {
   // const mongoURI = "mongodb://127.0.0.1:27017/test3";
   // MONGODB_CONNECT_URI =
   //   "mongodb+srv://tobiasdutra:nNnnUd2rPaOQwAFR@cluster0.dyfkjus.mongodb.net/";
   try {
-    mongoose
+    await mongoose
       .connect(MONGODB_CONNECT_URI, {
         serverSelectionTimeoutMS: 30000,
         socketTimeoutMS: 45000,
@@ -16,6 +16,6 @@ function Connection() {
   } catch (error) {
     console.error("Error connecting to mongodb", error.message);
   }
-}
+};
 
 module.exports = Connection;
