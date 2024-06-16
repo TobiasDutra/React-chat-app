@@ -3,9 +3,9 @@ require("dotenv").config();
 const { MONGODB_CONNECT_URI } = process.env;
 
 const Connection = async () => {
-  // const mongoURI = "mongodb://127.0.0.1:27017/test3";
-  // MONGODB_CONNECT_URI =
-  //   "mongodb+srv://tobiasdutra:nNnnUd2rPaOQwAFR@cluster0.dyfkjus.mongodb.net/";
+  const dbName = "nuevadb";
+  // const mongoURI = `${MONGODB_CONNECT_URI}/${dbName}`;
+  // const mongoURI = "mongodb://127.0.0.1:27017/chat4";
   try {
     await mongoose
       .connect(MONGODB_CONNECT_URI, {

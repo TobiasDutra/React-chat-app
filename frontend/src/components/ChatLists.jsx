@@ -7,7 +7,7 @@ export const ChatLists = ({chats}) => {
     function SenderChat ({message, username, avatar}) {
         return (
             <div className='chat_sender'>
-                <img src={avatar} alt="" />
+                <img src={avatar} alt={`${username}'s avatar`} />
                 <p>
                     <strong>{username}</strong> <br />
                     {message}
@@ -19,7 +19,7 @@ export const ChatLists = ({chats}) => {
     function ReceiverChat ({message, username, avatar}) {
         return (
             <div className='chat_receiver'>
-                <img src={avatar} alt="" />
+                <img src={avatar} alt={`${username}'s avatar`} />
                 <p>
                     <strong>{username} </strong> <br />
                     {message}
